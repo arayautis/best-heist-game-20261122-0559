@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Vault — The Grand Heist</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0d0a13;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  #wrap {
+    position: relative;
+    width: min(1280px, 100vw);
+    aspect-ratio: 16 / 9;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #17131f;
+    cursor: crosshair;
+  }
+  #help {
+    position: absolute;
+    left: 10px;
+    bottom: 8px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="help">WASD move &middot; Shift sneak &middot; hold E pick &middot; 1 EMP &middot; 2 smoke &middot; P pause &middot; M mute</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
